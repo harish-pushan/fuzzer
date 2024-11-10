@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<style>
+    .Hero {
+    background: linear-gradient(320deg, rgba(247,141,133,1) 18%, rgba(250,6,46,1) 48%, rgba(245,147,79,1) 77%);
+    background-size: 200% 200%; /* Increase the size of the background for more noticeable movement */
+    animation: bars 10s ease-in-out infinite;
+    color: white !important;
+    transition: width 0.4s ease-in-out;
+}
+
+section{
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+.bolder{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+@keyframes bars {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%; /* Change the direction for a more fluid movement */
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+</style>
+<body class=" text-gray-800 flex flex-col min-h-screen">
+
+    <!-- Hero Section -->
+    <section class="Hero text-white flex items-center justify-center h-screen">
+        <div class="text-center">
+            <h1 class="text-5xl font-bold mb-4">FuZ...Zer</h1>
+            <p class="text-xl mb-8" style="font-weight: bolder;">Stay One Step Ahead of Threats with FuZ...Zer</p>
+            <a href="{{ url_for('index' ) }}" class="bg-white text-red-600 font-semibold py-2 px-4 rounded shadow-lg hover:bg-gray-100 transition duration-200">Start Fuzz...</a>
+        </div>
+    </section>
+
+    <!-- About the Tool Section -->
+    <section id="about" class=" herpy-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 style="font-size: 3rem;" class="text-3xl font-bold mb-6 mt-3 text-center">Features</h2>
+            <p class=" bolder text-lg text-center mb-10">
+                Our tool is designed to help you manage your tasks and projects with ease. 
+                With a user-friendly interface and powerful features, you can streamline your workflow and increase productivity.
+            </p>
+            <div class=" grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Feature Card 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+                    <h3 style="font-size: 1.8rem;" class="text-2xl font-semibold mb-2">Multiple Attack Support</h3>
+                    <p class="bolder text-gray-600">The tool supports various types of attacks, including Cross-Site Scripting (XSS), Zero Redirect Bypass, and SQL Injection (SQLi). It allows users to quickly switch between attack types using an intuitive interface.</p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+                    <h3 style="font-size: 1.8rem;" class="text-2xl font-semibold mb-2">Customizable Wordlists</h3>
+                    <p class="bolder text-gray-600">Users can choose custom wordlists to perform fuzzing attacks, enabling more personalized and effective testing depending on the target vulnerabilities.</p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center">
+                    <h3 style="font-size: 1.8rem;" class="text-2xl font-semibold mb-2">User-Friendly Interface</h3>
+                    <p class="bolder text-gray-600">The tool comes with an easy-to-navigate interface, designed for both beginners and experienced security testers. It streamlines the process of launching attacks with just a few clicks, making it accessible to a wide range of users..</p>
+                </div>
+
+                <!-- Feature Card 4 -->
+                <div class="bg-gray-100 p-6 mb-7 rounded-lg shadow-md text-center">
+                    <h3 style="font-size: 1.8rem;" class="text-2xl font-semibold mb-2">Automated Output Logging</h3>
+                    <p class="bolder text-gray-600">The tool automatically logs the results of the attack into a CSV file for easy review, analysis, and reporting. You can also download the CSV file directly from the tool.</p>
+                </div>
+
+                <!-- Feature Card 5 -->
+                <div class="bg-gray-100 p-6 mb-7 rounded-lg shadow-md text-center">
+                    <h3 class="text-2xl font-semibold mb-2">Real-Time Attack Results</h3>
+                    <p class="bolder text-gray-600">After an attack is executed, results are immediately displayed in a user-friendly HTML table, offering quick insights into the discovered vulnerabilities.</p>
+                </div>
+
+                <!-- Feature Card 6 -->
+                <div class="bg-gray-100 p-6 mb-7 rounded-lg shadow-md text-center">
+                    <h3 style="font-size: 1.8rem;" class="text-2xl font-semibold mb-2">Error Handling for Better Accuracy</h3>
+                    <p class="bolder text-gray-600">Advanced handling of HTTP response codes (such as 404 and 302) ensures that the results are accurate and refined, reducing false positives during testing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="Hero text-white">
+        <div class="container mx-auto px-4 py-6">
+            <p class=" bolder text-center">&copy; 2024 Your Company Name. All rights reserved.</p>
+            <div class="flex bolder justify-center mt-2">
+                <a href="#" class="mx-2 bolder hover:underline">Privacy Policy</a>
+                <a href="#" class="mx-2 bolder hover:underline">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
